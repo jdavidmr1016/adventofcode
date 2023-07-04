@@ -1,0 +1,16 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "Advent of Code Tests",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Code"
+  ],
+  "author": "ICUBADEV",
+  "license": "MIT"
+}
