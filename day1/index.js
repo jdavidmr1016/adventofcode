@@ -1,19 +1,12 @@
-import fs from "fs";
-import path from "path";
+import { fileHandler } from "../helpers/fileHandler.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const url = path.join(__dirname, "./input.txt");
+const fileUrl = "../data/day1.txt";
+const lines = fileHandler(fileUrl);
 
 /* Function to process the File of data and return an Array of Elves
  *  containing each an array of calories
  */
 export const processFile = () => {
-  const fileData = fs.readFileSync(url, "utf8");
-  // Process the file content
-  const lines = fileData.split(`\n`); // Split the content into lines
   const dataArray = [];
   let copy = [];
   /*  Cicle every Line and push
