@@ -1,6 +1,6 @@
 // import { processFile, calcMaxCalories } from "./day1/index.js";
 //import { calcThreeMaxCalories } from "./day1/part2.js";
-import { processData } from "./day2/index.js";
+import { processData, processDataWithModiffiedPlays } from "./day2/index.js";
 
 /* Extract the data to an array of Elves containing an array of calories */
 //const data = processFile();
@@ -16,3 +16,9 @@ import { processData } from "./day2/index.js";
 
 const totalScore = processData();
 console.log("🚀 ~ file: index.js:18 ~ totalScore:", totalScore);
+
+const modifiedStrategyScore = processDataWithModiffiedPlays();
+console.log(
+  "🚀 ~ file: index.js:21 ~ modifiedStrategyScore:",
+  modifiedStrategyScore
+);

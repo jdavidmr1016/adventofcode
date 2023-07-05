@@ -5,7 +5,10 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-export const fileHandler = (filepath, separator = "\n", error) => {
+export const fileHandler = (filepath, separator = "\n") => {
+  if (!filepath) {
+    throw new Error("Please a valid file path");
+  }
   const url = path.join(__dirname, filepath);
 
   const fileData = fs.readFileSync(url, "utf8");
